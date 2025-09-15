@@ -1,0 +1,297 @@
+
+header {
+    text-align: right;
+    padding: 0.5rem;
+    text-shadow: 1px 1px 10px #fffcc6;
+}
+
+body {
+    font-family: 'Gowun Batang';
+    background-color: #102540;
+    color: #EFF9FD;
+    }
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        text-shadow: 2px 2px 8px #7288f6;
+    }
+
+    p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+
+    #menu {
+        display: none;
+        list-style-type: none;
+    }
+    
+    #menuToggle:checked~#menu {
+        display: block;
+    }
+    
+    #menuToggle {
+        display: none;
+    }
+    
+    a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.4rem;
+    }
+    
+    a:hover {
+        background-color: #7288f6;
+    }
+
+
+
+/* Egen grid */
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+
+.grid-item {
+    margin: 1rem;
+    padding: 2rem;
+    background-color: #0E3966;
+}
+
+.item1 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0; 
+}
+
+.item1 img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain;
+    max-width: 100%; 
+    border-radius: 100%;
+    box-shadow: 5px 5px 5px #EFF9FD;
+}
+
+/* Händelsen/Transition */
+
+.scale-up {
+    transition: transform 0.2s ease;
+    transform: scale(1.3); 
+}
+
+
+/* Skillbars */
+
+* {
+    box-sizing: border-box; 
+}
+
+.container-totalRuta {
+  width: 100%; 
+  background-color: #EFF9FD;
+}
+
+.skills {
+  text-align: right;
+  padding: 12px;
+  color: #EFF9FD;
+  width: 0%; 
+  background-color: #0F8AA6;
+  animation: growBar 2s ease forwards; 
+}
+
+
+@keyframes skillsBar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--target-width); 
+    }
+}
+
+.kostnadsberäkning {
+    --target-width: 95%; 
+    background-color: #0F8AA6;
+    animation: skillsBar 1.5s ease forwards;
+}
+
+.projektledning {
+    --target-width: 70%; 
+    background-color: #0F8AA6;
+    animation: skillsBar 2.2s ease forwards;
+}
+
+.galaxanalys {
+    --target-width: 85%; 
+    background-color: #0F8AA6;
+    animation: skillsBar 1.8s ease forwards;
+}
+
+
+/* Design av "Mina Projekt" */
+
+#appProjekt ul {
+    list-style-type: none;   
+    padding: 0;
+}
+
+#appProjekt li {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #0F8AA6;
+    border-radius: 20px;
+}
+
+.sorteringsKnapp {
+    background-color: #0F8AA6;
+    color: #EFF9FD;
+    padding: 8px 20px; 
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+}
+
+
+
+/* Design av bildspelet */
+
+.bildSpel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.bild {
+    display: none;
+}
+
+.bild img {
+    width: 100%;
+    height: auto;   
+}
+
+.föregående, .nästkommande {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.föregående {
+    left: 0.5%;
+}
+
+.nästkommande {
+    right: 0.5%;
+}
+
+
+
+/* Layout för datorskärm när det är min:768px */
+
+@media only screen and (min-width: 768px) {
+    header {
+        text-align: center;
+        padding: 0.5rem;
+     }
+    
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+ #menuIkon {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+        text-align: center;
+    }
+
+    #menu li {
+        display: inline;
+        margin: 2.4rem;
+    }
+
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+
+    .grid-item {
+        margin: 2rem;
+        padding: 3rem;
+        background-color: #0E3966;
+    } 
+    
+
+    .item1 {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .item2 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .item3 {
+        grid-row: 1 / span 2;
+        grid-column: 2;
+    }
+
+    .item4 {
+        grid-row: 3;
+        grid-column: 1 / span 2;
+    }
+
+    .item5 {
+        grid-row: 4;
+        grid-column: 1 / span 2;
+    }
+
+    .föregående {
+        left: 20%;
+    }
+
+    .nästkommande {
+        right: 20%;
+    }
+   
+
+}
+
+
+    /* Footer */
+    footer {
+        color: white;
+        display: flex;
+    }
+    
+    footer p {
+        margin: 0;
+        padding: 0 0.5rem;
+        text-align: left;
+        text-shadow: 1px 1px 10px #fffcc6;
+    }

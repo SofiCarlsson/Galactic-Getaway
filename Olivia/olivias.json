@@ -1,0 +1,36 @@
+[
+    {
+        "namn": "Interstellär försörjningskedjeexpansion",
+        "kund": "Xylon Prime Resemyndighet",
+        "beskrivning": "Utveckling av en förbättrad interstellär försörjningskedja för att stödja turism till de nyligen öppnade destinationerna på planeten Xylon Prime. Projektet inkluderar att optimera bränsletransporter och resurser för långdistanstransporter.",
+        "datum": "2023-02-10"
+    },
+
+    {
+        "namn": "Quantum Gate Logistikhubb",
+        "kund": "Alpha Centauri Stjärnresorter",
+        "beskrivning": "Byggnation och drift av en ny logistikhub vid Quantum Gate på Alpha Centauri för att effektivisera passagerarflödet och resursleveranser till de mest populära turistmålen i systemet.",
+        "datum": "2023-06-01"
+    },
+
+    {
+        "namn": "Mars-kolonins äventyrspaket",
+        "kund": "RedDust Expeditions",
+        "beskrivning": "Skapande av en ny logistikstrategi för att stödja turister som besöker Mars-kolonin. Projektet inkluderar hantering av transporter av mat, vatten och nödförnödenheter till kolonins besökare.",
+        "datum": "2024-01-15"
+    },
+
+    {
+        "namn": "Koordinering av Titan-kryssningsflottan",
+        "kund": "Galaktiska Oceaniska Kryssningar",
+        "beskrivning": "Planering och koordinering av en ny flottuppställning av kryssningsskepp som ska resa genom Titan- och Saturnusregionen. Logistikschefen ansvarar för att organisera bränsletillgång, underhåll och säkerhet för hela flottan.",
+        "datum": "2023-05-12"
+    },
+    
+    {
+        "namn": "Optimering av Lunar Outpost-leveranser",
+        "kund": "MoonBase Äventyr",
+        "beskrivning": "Optimering av leveranskedjan för Lunar Outpost, ett äventyrsmål på månens baksida. Målet är att minska tiden för leveranser från jorden och säkra smidiga transporter av kritiska material och souvenirer till turister.",
+        "datum": "2023-09-01"
+    }
+]

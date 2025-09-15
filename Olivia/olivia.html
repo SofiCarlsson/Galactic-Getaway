@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="olivia.css">
+    <script src="olivia.js" defer></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="oliviavue.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Vexor</title>
+</head>
+<body>
+    <header>
+        <h1>GALACTIC GETAWAYS</h1>
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" id="menuIkon">&#9776;</label>
+            <ul id="menu">
+                <li><a href="../index.html#omOss">Om oss</a></li>
+                <li><a href="../index.html#våraAnställda">Våra Anställda</a></li>
+                <li><a href="../index.html#resmål">Våra resemål</a></li>
+                <li><a href="../index.html#boka">Kontakta oss</a></li>
+            </ul>
+        </header>
+    
+        <div class="gridContainer">
+    
+            <div class="grid-item item1">
+                <img id="vexor-bild" src="vexorHuvudbild.jpg" alt="Bild på Vexor, logistikchef på Galactic Getaways">
+            </div>
+
+            <div class="grid-item item2">
+                <h2 id="skillBar">Skills</h2>
+                <p>Kostnadsberäkning</p>
+                <div class="container-totalRuta">
+                    <div class="skills kostnadsberäkning">95%</div>
+                </div>
+
+                <p>Projektledning</p>
+                <div class="container-totalRuta">
+                     <div class="skills projektledning">70%</div>
+                </div>
+
+                <p>Galaxanalys</p>
+                <div class="container-totalRuta">
+                    <div class="skills galaxanalys">85%</div>
+                </div>
+            </div>
+    
+            <div class="grid-item item3">
+                <h2 id="vexorPresentation">Vexor</h2>
+                <p>Hej mitt namn är Vexor! Jag är logistikchef på Galactic Getaways, och mitt jobb handlar om att göra det omöjliga möjligt. Du kanske inte tänker så mycket på logistiken bakom intergalaktiska resor, men det är jag som ser till att allt flyter på smidigt från det ögonblick du kliver ombord på ditt skepp till din ankomst på en avlägsen planet.</p>
+                <p>Jag kommer från en planet som är känd för vår förmåga att tänka i flera dimensioner samtidigt, vilket kommer väl till pass när man planerar rutter och flöden över hela galaxen! Med min bakgrund i interstellär fysik och passion för äventyr blev jag snabbt en del av Galactic Getaways team, och jag har älskat varje sekund sedan dess.</p>
+                <p>Jag älskar att lösa komplexa utmaningar, som att få resurser att anlända exakt på sekunden till en koloni på en måne eller att hitta nya sätt att effektivisera transporterna mellan stjärnsystem. Det är lite som att spela schack, men med rymdskepp och stjärnportar! Att få jobba med resor till så många fantastiska destinationer gör att jag känner mig hemma i hela galaxen.</p>
+                <p>För mig är det bästa med att arbeta här att vi faktiskt förändrar människors liv. Det är inte bara ett jobb, det är ett äventyr varje dag. Jag älskar tanken på att jag är en del av ett team som öppnar upp galaxen för alla, oavsett om du vill besöka en exotisk planet eller bara ta en semester under tre månar. Våra resenärer får uppleva saker de bara har drömt om, och jag får vara med och göra de drömmarna till verklighet.</p>
+                <p>Men det är också gemenskapen på företaget som gör det så speciellt. Vi är en samling av varelser från olika världar, med olika perspektiv och förmågor, men vi delar samma mål: att skapa oförglömliga upplevelser. Oavsett om du är en människa, en alien eller någon från ett annat hörn av universum, så känns det som om vi är en stor familj här på Galactic Getaways. Så nästa gång du tänker på en semester ute bland stjärnorna, tänk på oss och tänk på mig, Vexor, som ser till att din resa blir perfekt!</p>
+            </div>
+    
+            <div class="grid-item item4" id = "appProjekt">
+                <h2 id="minaProjekt">Mina projekt</h2>
+                <div>
+                    <p>Sortera projekt:</p>
+                    <button @click="sortByDate('latest')" class="sorteringsKnapp">Senaste först</button>
+                    <button @click="sortByDate('oldest')" class ="sorteringsKnapp">Äldsta först</button>
+                </div>
+
+                <div>
+                    <p>Filtrera i bokstavsordning baserat på projektens namn:</p>
+                    <input type="text" v-model="filterLetter" placeholder="Skriv in en bokstav..." id="bokstavsOrdningInput">
+                </div> 
+                
+                    <ul>
+                        <li v-for="project in filteredProjects" :key="project.id">
+                            <p>Namn: {{ project.namn }}</p>
+                            <p>Kund: {{ project.kund }}</p>
+                            <p>Beskrivning: {{ project.beskrivning }}</p>
+                            <p>Datum: {{ project.datum }}</p>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>    
+    
+            <div class="grid-item item5">
+                <h2 id="bildspel">Bildspel</h2>
+                <div class="bildSpel">
+                    <div class="bild">
+                        <img src="vexor1.jpg" alt="bild på vexor på lagret">
+                    </div>
+
+                    <div class="bild">
+                        <img src="vexor2.jpg" alt="bild på vexor vid sitt skrivbord">
+                    </div>
+
+                    <div class="bild">
+                        <img src="vexor3.jpg" alt="bild på vexor som nyanställd">
+                    </div>
+
+                    <div class="bild">
+                        <img src="vexor4.jpg" alt="bild på vexor i rymddräkt">
+                    </div>
+
+                    <div class="bild">
+                        <img src="vexor5.jpg" alt="bild på vexor på kontoret">
+                    </div>
+
+                    <div class="bild">
+                        <img src="vexor6.jpg" alt="bild på vexor som arbetar på kontoret med hjälm">
+                    </div>
+                    
+                    <button class="föregående" onclick="bytBild(-1)">
+                        <img src="foregaendeknapp.png" alt="föregåendeknapp">
+                    </button>
+                    <button class="nästkommande" onclick="bytBild(1)">
+                        <img src="nastaknapp.png" alt="nästaknapp">
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <footer>
+            <p>Adress:</p>
+            <p>Rymdvägen 1</p>
+            <p>797 62</p>
+            <p>Vintergatan</p>
+        </footer>
+    
+</body>
+</html>
