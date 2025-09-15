@@ -1,0 +1,279 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #0a0e27;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #1b2247;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    text-shadow: 0 0 10px #00b4ff;
+}
+
+h1, h2 {
+    margin-top: 2rem;
+    text-shadow: 0 0 10px #00b4ff;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #1b2247;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00b4ff;
+    text-decoration: none;
+    text-shadow: 0 0 5px #00b4ff;
+}
+
+nav ul li a:hover {
+    color: #e0e0e0;
+}
+
+#menuToggle {
+    display: none;
+}
+
+#menuIkon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #00b4ff;
+}
+
+.presentation img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 2px solid #00b4ff;
+    }
+
+.carousel img {
+    width: 100%;
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    }
+
+.carousel img.active {
+    display: block;
+    z-index: 1;
+    animation: fade 1s ease-in-out;
+    }
+
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #00b4ff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    }
+
+button:hover {
+    background-color: #00b4ff;
+    color: #0a0e27;
+    }
+
+#prevBtn {
+    left: 10px;
+    }
+    
+#nextBtn {
+    right: 10px;
+    }
+    
+@keyframes fade {
+     from {
+        opacity: 0;
+     }
+     to {
+        opacity: 1;
+     }
+    }
+
+.project-list {
+    list-style-type: none;
+    padding: 0;
+    }
+    
+.project-list li {
+    background-color: #1b2247;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    text-shadow: 0 0 5px #00b4ff;
+    }
+
+.filter, .sort {
+    margin-bottom: 20px;
+    }
+    
+.filter label, .sort label {
+    margin-right: 10px;
+    }
+    
+
+.skillbar {
+    margin: 1rem 0;
+    }
+    
+.skillbar label {
+    color: #00b4ff;
+    text-shadow: 0 0 5px #00b4ff;
+    }
+    
+ .progress-bar {
+    background-color: #1b2247;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    }
+    
+.progress {
+    background-color: #00b4ff;
+    height: 100%;
+    width: 0; 
+    transition: width 3.5s ease-in-out;
+    }
+
+@media (max-width: 768px) {
+    #menuIkon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1b2247;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+
+    #menuToggle:checked + #menuIkon + ul {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    .presentation-slideshow-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 4rem;
+        background-color: #15193c;
+    }
+
+    .presentation {
+    flex: 1;
+    padding: 2rem;
+    background-color: transparent;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px #00b4ff;
+    }
+
+    .slideshow, .carousel {
+    flex: 1;
+    padding: 2rem;
+    background-color: transparent;
+    text-align: center;
+    }
+
+    .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 400px;
+    overflow: hidden;
+    }
+
+    .projects-skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 4rem;
+    background-color: #0a0e27;
+    }
+
+    .projects {
+    flex: 1;
+    padding: 2rem;
+    background-color: #15193c;
+    color: #fff;
+    text-shadow: 0 0 5px #00b4ff;
+    }
+
+    .skills {
+    flex: 1;
+    padding: 2rem;
+    background-color: #0a0e27;
+    }
+}
+
+@media (max-width: 1024px) {
+    .presentation {
+    padding: 2rem;
+    background-color: #15193c;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px #00b4ff; 
+    display: block;
+    }
+
+    .slideshow, .carousel {
+    padding: 2rem;
+    background-color: #0a0e27;
+    text-align: center;
+    }
+
+    .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 400px;
+    overflow: hidden;
+    }
+
+    .projects {
+    padding: 2rem;
+    background-color: #15193c;
+    color: #fff;
+    text-shadow: 0 0 5px #00b4ff;
+    }
+
+    .skills {
+    padding: 2rem;
+    background-color: #0a0e27;
+    display: block;
+    }
+}

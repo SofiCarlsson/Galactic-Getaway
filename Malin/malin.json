@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Galaktisk Länk",
+        "description": "En plattform som kopplar resenärer med utomjordiska civilisationer för sömlös kommunikation.",
+        "tags": ["Intergalaktisk Diplomati", "Multisensorisk Kommunikation"],
+        "customer": "Stellar Connect"
+    },
+    {
+        "id": 2,
+        "title": "Kosmisk Navigatör",
+        "description": "Ett intuitivt navigationsverktyg som hjälper användare att planera sina rutter genom olika galaxer, vilket säkerställer säkra resor.",
+        "tags": ["Navigationsintuition", "Avancerad Rymdlogistik"],
+        "customer": "Galactic Routes Inc."
+    },
+    {
+        "id": 3,
+        "title": "AstroQuest",
+        "description": "En interaktiv plattform för rymdturism som visar unika himlakroppar och upplevelser.",
+        "tags": ["Kosmisk Kännedom", "Design"],
+        "customer": "Cosmic Adventures Ltd."
+    },
+    {
+        "id": 4,
+        "title": "Nebulakännare",
+        "description": "En virtuell verklighetsupplevelse som låter användare utforska nebulosor och deras unika miljöer.",
+        "tags": ["Kosmisk Kännedom", "Multisensorisk Kommunikation"],
+        "customer": "Nebula Explorations"
+    },
+    {
+        "id": 5,
+        "title": "Stjärninsikter",
+        "description": "En avancerad AI-assistent utformad för att ge realtidsdata och insikter för interstellära resenärer.",
+        "tags": ["AI", "Intergalaktisk Diplomati"],
+        "customer": "Star Insights AI"
+    }
+]

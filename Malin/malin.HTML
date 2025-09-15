@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tivora's Portfolio</title>
+    <link rel="stylesheet" href="malin.css">
+    <script defer src="https://unpkg.com/vue@3.2.47/dist/vue.global.js"></script>
+    <script defer src="malinVue.js"></script>
+    <script src="malin.js" defer></script>
+
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>GALACTIC GETAWAYS</h1>
+            <nav>
+                <input type="checkbox" id="menuToggle">
+                <label for="menuToggle" id="menuIkon">&#9776;</label>
+                <ul id="menu">
+                    <li><a href="../index.html#omOss">Hem</a></li>
+                    <li><a href="#om-mig">Om Mig</a></li>
+                    <li><a href="#bilder">Bilder</a></li>
+                    <li><a href="#projekt">Projekt</a></li>
+                    <li><a href="#kompetenser">Kompetenser</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="presentation-slideshow-container">
+            <section class="presentation" id="om-mig">
+                <h2>Om Mig</h2>
+                <img src="profilbild.jpg" alt="Profilbild">
+                <p> Tivora har telepatiska krafter och kan kommunicera på alla språk, vilket gör henne till den perfekta länkpersonen mellan kunder och främmande civilisationer. </p>
+                <p> Som en veteran inom intergalaktiska resor har Tivora en naturlig talang för att förstå och lugna både nya resenärer och erfarna rymdfarare. </p> 
+                <p> Hon guidar passagerare genom galaxens mest spektakulära destinationer, från mystiska nebulosor till avlägsna månar, med en medfödd förmåga att förutse deras önskemål. </p> 
+                <p> Hennes lugnande närvaro ger en extra trygghet på resor genom både lugna och turbulenta rymdpassager, och hon är känd för att skapa minnesvärda, harmoniska upplevelser under de mest storslagna kosmiska resorna. </p>
+            </section>
+
+            <section class="slideshow" id="bilder">
+                <h2>Bilder</h2>
+                <div class="carousel">
+                    <button id="prevBtn">&#8592;</button>
+                    <img src="slideshowImage1.jpeg" alt="Bild på många blåa aliens">
+                    <img src="slideshowImage2.jpeg" alt="Bild på alien med saturnus i bakgrunden">
+                    <img src="slideshowImage3.jpeg" alt="Bild på blå alien">
+                    <button id="nextBtn">&#8594;</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="projects-skills-container"> 
+        <section class="projects" id="projekt">
+            <h2>Projekt</h2>
+            <div id="malinVue">
+                <div class="filter">
+                    <label>Filtrera efter Tag:</label>
+                    <select v-model="selectedTag" @change="filterProjects">
+                        <option value="">All</option>
+                        <option v-for="tag in tags" :key="tag" :value="tag">{{ tag }}</option>
+                    </select>
+                </div>
+            
+                <div class="sort">
+                    <label>Sortera efter alfabet:</label>
+                    <select v-model="sortOrder" @change="sortProjects">
+                        <option value="asc">A-Ö</option>
+                        <option value="desc">Ö-A</option>
+                    </select>
+                </div>
+            
+                <ul class="project-list">
+                    <li v-for="project in filteredProjects" :key="project.id">
+                        <h3>{{ project.title }}</h3>
+                        <p>{{ project.description }}</p>
+                        <p><strong>Kund:</strong> {{ project.customer }}</p>
+                        <p><strong>Tags:</strong> {{ project.tags.join(', ') }}</p>
+                    </li>
+                </ul>
+            </div>
+            
+                                        
+        </section>
+        <section class="skills" id="kompetenser">
+            <h2>Kompetenser</h2>
+            <div class="skillbar">
+                <label>Intergalaktisk Diplomati </label>
+                <div class="progress-bar">
+                    <div class="progress" data-width="90%"></div>
+                </div>
+            </div>
+            <div class="skillbar">
+                <label>Navigationsintuition </label>
+                <div class="progress-bar">
+                    <div class="progress" data-width="85%"></div>
+                </div>
+            </div>
+            <div class="skillbar">
+                <label>Kosmisk Kännedom</label>
+                <div class="progress-bar">
+                    <div class="progress" data-width="80%"></div>
+                </div>
+            </div>
+            <div class="skillbar">
+                <label>Avancerad Rymdlogistik</label>
+                <div class="progress-bar">
+                    <div class="progress" data-width="75%"></div>
+                </div>
+            </div>
+            <div class="skillbar">
+                <label>Multisensorisk Kommunikation</label>
+                <div class="progress-bar">
+                    <div class="progress" data-width="70%"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
