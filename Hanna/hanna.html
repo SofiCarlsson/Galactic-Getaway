@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="hanna.css">
+    <script defer src="hanna.js"></script>
+    <script defer src="hannaVue.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Sefra</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="pageTitle">GALACTIC GETAWAYS</h1>
+        <input type="checkbox" id="menuToggle">
+        <label for="menuToggle" id="menuIkon">&#9776;</label>
+        <ul id="menu">
+            <li><a href="../index.html#omOss">Om oss</a></li>
+            <li><a href="../index.html#våraAnställda">Våra anställda</a></li>
+            <li><a href="../index.html#resmål">Våra resmål</a></li>
+            <li><a href="../index.html#boka">Kontakta oss</a></li>
+        </ul>
+    </header>
+    <div class="flexbox">
+        <div class="flexItem">
+            <img id="sefra" src="sefra.jpg" alt="Bild på en alienpilot i rymden">
+            <h1 id="sefraTitle">SEFRA</h1>
+            <h2>Kapten och navigationsspecialist</h2>
+        </div>
+        <div class="flexItem">
+            <h2>Kompetenser</h2>
+            <p class="skillTitles">Navigering</p>
+            <div class="skillbarBackground">
+                <p class="skillbar navigation">90%</p>
+            </div>
+            <p class="skillTitles">Ruttplanering</p>
+            <div class="skillbarBackground">
+                <p class="skillbar routeplanning">85%</p>
+            </div>
+            <p class="skillTitles">Asteroidundvikande</p>
+            <div class="skillbarBackground">
+                <p class="skillbar ateroidavoidance">100%</p>
+            </div>
+            <p class="skillTitles">Gravitationsfältanpassning</p>
+            <div class="skillbarBackground">
+                <p class="skillbar gravitationfieldadaptation">70%</p>
+            </div>
+        </div>
+        <div class="flexItem">
+            <h2 id="aboutMe">Lär känna Sefra!</h2>
+            <p>Sefra är en veteran inom rymdfärder och en av Galactic Getaways mest uppskattade piloter. Hon kommer från
+                en liten planet i ett avlägset solsystem, där hon tidigt utvecklade en passion för stjärnornas oändliga
+                vidder. Med över två decennier av erfarenhet som pilot är Sefra välbekant med galaxens alla hörn, från
+                de mest tätt trafikerade handelsvägarna till avlägsna, outforskade nebulosor.</p>
+            <p>Det som gör Sefra så unik är hennes exceptionella lugn och precision, särskilt i de mest utmanande
+                situationer. Att navigera genom svarta hål och pulsarstormar är vardag för henne, och hon har en
+                oöverträffad förmåga att hålla huvudet kallt även när allt annat runtomkring är kaotiskt. Med en
+                intuitiv känsla för rymdens flöden och fenomen kan hon hantera skeppets styrsystem på ett sätt som få
+                andra kan. Det är inte för intet som hon betraktas som en oersättlig medlem av Galactic Getaways
+                besättning.</p>
+            <p>Sefra är också en mentor och ledare ombord. Hon har en lugnande närvaro som smittar av sig på både
+                besättning och passagerare, och med sitt djupa kunnande och skarpa sinne för navigering ser hon till att
+                varje resa blir säker och minnesvärd. För Sefra handlar rymdfärder inte bara om att komma från punkt A
+                till punkt B; det är ett äventyr, en möjlighet att utforska det okända och skapa magiska upplevelser för
+                alla som följer med henne på resan.</p>
+            <p>Vill du känna dig trygg på din nästa interstellära semester? Då är Sefra rätt pilot för dig.</p>
+        </div>
+        <div id="slideshow" class="flexItem">
+            <h2>Bilder</h2>
+            <div class="slideshowContainer">
+                <div class="slides">
+                    <img src="bildspel/sefraExam.jpg" alt="Bild på en alien som har tagit examen">
+                    <p>Sefras examen från en av galaxernas bästa skolor</p>
+                </div>
+                <div class="slides">
+                    <img src="bildspel/sefraYoung.jpg" alt="Bild på ung alien">
+                    <p>Sefra redo för sin första flygning efter sin examen</p>
+                </div>
+                <div class="slides">
+                    <img src="bildspel/spaceship.jpg" alt="Bild på ett rymdskepp">
+                    <p>Ett av de passagerarrymdskepp Sefra oftast flyger </p>
+                </div>
+                <div class="slides">
+                    <img src="bildspel/blackhole.jpg" alt="Bild på ett rymdskepp som flyger genom ett svart hål">
+                    <p>Sefra navigerar genom svarta hål likt ingen annan</p>
+                </div>
+                <div class="slides">
+                    <img src="bildspel/homeplanet.jpg" alt="Bild på en planet i rymden">
+                    <p>Sefras hemplanet, ligger ca 10 ljusår från Jorden</p>
+                </div>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </div>
+        <div class="flexItem">
+            <h2 id="projects">Tidigare projekt</h2>
+            <div id="projectApp">
+                <div class="filterAndSort">
+                    <button @click="setSortOrder('asc')">Sortera a-ö</button>
+                    <button @click="setSortOrder('desc')">Sortera ö-a</button>
+                    <input type="text" v-model="searchQuery" placeholder="Filtrera projekt...">
+                </div>
+                <p v-for="project in filteredProjects">
+                    <br>
+                    <span class="projectTitle">{{ project.name }}</span> <br>
+                    Kund: {{project.customer}} <br>
+                    Använd teknologi: {{project.technology}} <br>
+                    Beskrivning: {{project.description}} <br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Adress:</p>
+        <p>Rymdvägen 1</p>
+        <p>797 62</p>
+        <p>Vintergatan</p>
+    </footer>
+</body>
+
+</html>

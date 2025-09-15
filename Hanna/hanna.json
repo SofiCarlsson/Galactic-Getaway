@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Operation Nebulosa",
+        "customer" : "Interstellar Research Group",
+        "goal" : "Säker och exakt transport av forskare genom en svårnavigerad nebulosa till en avlägsen planet.",
+        "technology" : "Nebula Navigation System (NNS)",
+        "description": "Sefra ledde en framgångsrik rutt genom en tät nebulosa för att transportera forskare till en avlägsen planet. Hennes navigeringsförmåga säkerställde att besättningen nådde sin destination utan problem."
+    },
+    {
+        "id" : 2,
+        "name" : "Asteroidhinderprojektet",
+        "customer" : "Galactic Getaways",
+        "goal" : "Utveckla en säkrare och mer effektiv rutt för att undvika asteroidfält på handelsvägar.",
+        "technology" : "Asteroid Evasion Matrix (AEM) och Predictive Route Optimizer",
+        "description" : "I detta projekt utvecklade Sefra en innovativ strategi för att undvika asteroidfält på handelsvägar, vilket resulterade i en ökad säkerhet och effektivitet för Galactic Getaways."
+    },
+    {
+        "id" : 3,
+        "name" : "Gravitationsanpassning",
+        "customer" : "Stellar Freight Enterprises",
+        "goal" : "Optimera bränsleförbrukning och rutter genom ett nytt stjärnsystems gravitationsfält.",
+        "technology" : "Graviton Field Mapper (GFM) och Fuel Efficiency Analyzer (FEA)",
+        "description" : "Sefra genomförde en detaljerad analys av gravitationsfält i ett nytt stjärnsystem och skapade en guide för framtida rutter, vilket minskade bränsleförbrukningen vid inträde och utträde."
+    },
+    {
+        "id" : 4,
+        "name" : "Evakueringsövning",
+        "customer" : "Galaxy Transit Solutions",
+        "goal" : "Förbättra besättningens förmåga att hantera nödsituationer och säkerställa snabba och säkra evakueringar.",
+        "technology" : "Crisis Management Suite (CMS) och Emergency Simulation Interface (ESI)",
+        "description" : "Sefra organiserade och genomförde en omfattande nödevakueringsövning ombord, vilket säkerställde att besättningen var väl förberedd för oväntade situationer och förbättrade säkerhetsprotokollen."
+    },
+    {
+        "id" : 5,
+        "name" : "Hyperrymdstestning",
+        "customer" : "Quantum Leap Technologies",
+        "goal" : "Testa och optimera nya hyperrymdsnavigationssystem för snabbare och säkrare rymdfärder.",
+        "technology" : "HyperDrive Navigator 9000 och Quantum Stability Tracker (QST)s",
+        "description" : "Sefra var en del av ett team som testade nya hyperrymdsnavigationssystem. Hennes insikter och feedback var avgörande för att optimera teknologin och förbättra rymdfärderna för framtida uppdrag."
+    }
+]
