@@ -1,0 +1,365 @@
+/* Bild på raket */
+#testSkepp {
+    max-width: 50%;
+}
+
+.grid-item.item1 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animation av rymdskepp */
+.rymdskepp {
+    position: absolute;
+    animation: flyg 10s linear infinite;
+    width: 20%;
+}
+
+/* Rymdskeppsfärd */
+@keyframes flyg {
+    0% {
+        transform: translate(0vw, 0vh);
+    }
+
+    100% {
+        transform: translate(100vw, -50vh)
+    }
+}
+
+
+
+#menu {
+    color: #3B568C;
+    display: none;
+    list-style-type: none;
+}
+
+#menuToggle:checked~#menu {
+    display: block;
+}
+
+#menuToggle {
+    display: none;
+}
+
+body {
+    font-family: 'Gowun Batang';
+    background-image: linear-gradient(to bottom, #2a292b, #182030);
+    margin: 0;
+}
+
+header {
+    color: #0E2440;
+    padding: 0.5rem;
+    text-align: right;
+}
+
+#header-bild {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+h1,
+h2,
+p,
+label,
+a {
+    color: #fff;
+}
+
+h1,
+h2 {
+    text-align: center;
+    text-shadow: 2px 2px 5px #000;
+}
+
+p {
+    text-align: left;
+    margin: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    padding: 0.4rem;
+}
+
+a:hover {
+    background-color: #7288f6;
+}
+
+/*För knappen till inviduella sidorna*/
+.länkButton {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.button-container {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gridContainer {
+    display: grid;
+}
+
+.grid-item {
+    margin: 1rem 0;
+    background-color: #4948481b;
+}
+
+.alien-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.alien-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alien {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 10px;
+    text-align: center;
+}
+
+.alien img {
+    min-width: 100%;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 7%;
+    border: solid #ffffff;
+}
+
+.alien-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.planet-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.planet {
+    flex: 1;
+    max-width: 18%;
+    text-align: center;
+}
+
+.planet-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    box-shadow: 0px 10px 20px #ffffff;
+}
+
+.item {
+
+    display: block;
+    width: 100%;
+}
+
+#menu li {
+    display: block;
+    margin: 1rem;
+}
+
+.planet-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.planet {
+    max-width: 100%;
+}
+
+#kontaktform {
+    min-width: 80%;
+}
+
+/* Layout för datorskärm när det är min:768px */
+@media only screen and (min-width: 768px) {
+
+
+    .grid-item {
+        margin: 1rem;
+    }
+
+    .item1 {
+        grid-row: 1;
+        grid-column: 1/span 3;
+        background-size: cover;
+        margin: 0;
+    }
+
+    .item2 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .item3 {
+        grid-row: 2;
+        grid-column: 2/ span 2;
+    }
+
+    .item4 {
+        grid-row: 3;
+        grid-column: 1/ span 3;
+    }
+
+    .item5 {
+        grid-row: 4;
+        grid-column: 1/ span 3;
+    }
+
+    #menuIkon {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+        text-align: center;
+    }
+
+    #menu li {
+        display: inline;
+        margin: 2.4rem;
+    }
+
+    .alien-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-direction: row;
+    }
+
+    .alien {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: 1;
+        gap: 10px;
+    }
+
+    .alien img {
+        min-width: 200px;
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 7%;
+        border: solid #ffffff;
+    }
+
+    .alien p {
+        font-size: 80%;
+    }
+
+    .planet-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .planet {
+        flex: 1;
+        max-width: 18%;
+        text-align: center;
+    }
+}
+
+.ogiltig-input {
+    border: 2px solid red;
+}
+
+.giltig-input {
+    border: 2px solid green
+}
+
+/* Stil för formulärbehållaren */
+#kontaktform {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #182030;
+}
+
+/* Stil för varje formulärgrupp */
+#kontaktform>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Stil för etiketterna */
+#kontaktform label {
+    width: 150px;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: right;
+}
+
+/* Stil för input-fälten */
+#kontaktform input,
+#kontaktform textarea {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Stil för textarea */
+#kontaktform textarea {
+    resize: vertical;
+}
+
+/* Stil för skicka-knappen */
+#skickaInKnapp {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#skickaInKnapp:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #182030;
+    display: flex;
+}
+
+footer p {
+    margin: 0;
+    padding: 0 0.5rem;
+    text-shadow: 1px 1px 10px #fffcc6;
+}
