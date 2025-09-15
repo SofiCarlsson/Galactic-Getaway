@@ -1,0 +1,207 @@
+.header h1 {
+    display: flex; 
+    justify-content: space-between;
+    justify-content: center;
+    padding: 10px;
+    background-color: #49087e;
+    color: white;
+    margin: 0;
+  }
+
+  .presentation h1 {
+    text-align: center;
+  }
+  
+  
+  
+  .presentation img {
+    border-radius: 100px; 
+    display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+  width: 200px; 
+  }
+  
+
+
+ #menu {
+    display: none;
+    list-style-type: none;
+}
+
+#menuToggle:checked~#menu {
+     display: block;
+ }
+
+
+#menuToggle {
+     display: none; 
+}
+
+/* Responsiv layout för dator */
+@media only screen and (min-width: 768px) {
+    #menuIkon {
+        display: none;
+      }
+      
+    
+    #menu {
+        display: block;
+        text-align: center;
+    }
+    
+    #menu li {
+        display: inline;
+        margin: 2.4rem;
+    }
+}
+
+
+body {
+    font-family: 'Gowun Batang';
+    background-color: #d5d6d8;
+    margin: 0;
+}
+  
+  /* Responsiv layout för mobil */
+  @media (max-width: 600px) {
+    .presentation, .projects, .skills, .slideshow {
+      text-align: center;
+    }
+    .header{
+      display: flex;
+        align-items: center; 
+        padding: 5px;
+    }
+  }
+  
+  /* Skill-bars */
+  .skill-bar {
+    width: 50%; 
+    background-color: #f3f3f3; 
+    margin: 10px 0; /* Avstånd */
+    position: relative;
+    border-radius: 30px; 
+    overflow: hidden; 
+    height: 30px; 
+    line-height: 30px; 
+    text-align: center; 
+    font-weight: bold;
+    color: rgb(252, 252, 252); 
+}
+
+.skill-bar::after {
+    display: block;
+    background-color: #4caf50; 
+    width: 0%; 
+    border-radius: 30px; 
+    position: absolute;
+    height: 100%;
+    animation: fill-bar 2s ease forwards; 
+}
+
+
+.skill-bar[data-skill="70"]::after {
+  animation: fill-bar-70 2s ease forwards;
+  content: "Driven 70%";
+}
+
+.skill-bar[data-skill="60"]::after {
+  animation: fill-bar-60 2s ease forwards;
+  content: "Nyfiken 60%";
+}
+
+.skill-bar[data-skill="90"]::after {
+  animation: fill-bar-90 2s ease forwards;
+  content: "Flexibel 90%";
+}
+
+@keyframes fill-bar-70 {
+  from {
+      width: 0%; 
+  }
+  to {
+      width: 70%; 
+  }
+}
+
+@keyframes fill-bar-60 {
+  from {
+      width: 0%; 
+  }
+  to {
+      width: 60%; 
+  }
+}
+
+@keyframes fill-bar-90 {
+  from {
+      width: 0%; 
+  }
+  to {
+      width: 90%; 
+  }
+}
+
+
+
+  /* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 30%;
+    margin: auto;
+  }
+  
+  .mySlides img {
+    width: 100%;
+    border-radius: 50px;
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* Nästa/föregående knappar */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position på nästa-knappen till höger */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Bakgrundsfärg på knapparna vid bildspel */
+  .prev:hover, .next:hover {
+    background-color: rgba(162, 158, 158, 0.8);
+  }
+
+  footer {
+    background-color: #49087e;
+    color: white;
+    display: flex;
+}
+
+   footer p {
+    margin: 0;
+    padding: 0 0.5rem;
+    
+}

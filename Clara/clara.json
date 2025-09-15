@@ -1,0 +1,31 @@
+{
+    "projects": [
+      {
+        "title": "Galaktiska Stränder",
+        "client": "Planetary Tourism Agency",
+        "description": " Velari organiserade en guidad tur till de mest spektakulära stränderna i galaxen, inklusive de glittrande stränderna på Alora och de mystiska vattnen på planeten Zyphor. Resenärerna fick njuta av sol, hav och exotiska aktiviteter."
+      },
+      {
+        "title": "Stjärnorna i Thalos",
+        "client": "Interstellar Travel Corp",
+        "description": "Detta projekt fokuserade på en naturskön vandring genom de majestätiska skogarna på Thalos. Velari delade med sig av sin kunskap om de sällsynta växterna och djuren, samt de mytiska legender som omger området."
+      },
+      {
+        "title": "Historiska Ruiner på Galdo",
+        "client": "Galactic History Society",
+        "description": "Velari ledde en utflykt till de uråldriga ruinerna på Galdor, där hon berättade om de gamla civilisationerna som en gång blomstrade där. Resenärerna fick lära sig om de historiska händelserna som format planetens kultur."
+      },
+      {
+        "title": "Kulturella Festivaler på Nyx",
+        "client": "Cultural Exchange Alliance",
+        "description": "Velari organiserade en tur till Nyx under deras årliga kulturella festival. Hon guidade resenärerna genom färgsprakande evenemang och delade med sig av traditioner och riter som firas av lokalbefolkningen."
+      },
+      {
+        "title": "Äventyr i Nebulan",
+        "client": "Cosmic Adventure Tours",
+        "description": " Detta projekt innebar en adrenalinfylld expedition i Nebulan, där Velari tog med resenärerna på en spännande resa genom asteroidfält och utforskade dolda grottor med spektakulära utsikter."
+      }
+      
+    ]
+  }
+  

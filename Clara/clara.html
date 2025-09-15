@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="clara.css">
+  <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script defer src="claraVue.js"></script>
+  <script src="clara.js" defer></script>
+  <title>Velari</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+ 
+    
+</head>
+<body>
+    <div class="header">
+        <h1>GALACTIC GETAWAYS</h1>
+        <input type="checkbox" id="menuToggle">
+        <label for="menuToggle" id="menuIkon">&#9776;</label>       
+        <ul id="menu">
+            <li><a href="../index.html#omOss">Om oss</a></li>
+            <li><a href="../index.html#våraAnställda">Våra anställda</a></li>
+            <li><a href="../index.html#resmål">Våra resmål</a></li>
+            <li><a href="../index.html#boka">Kontakta oss</a></li>
+        </ul>
+    </div>
+
+    <div class="presentation">
+        <h1>Velari</h1> 
+        <img src="Bilder%20pa%20Velari/alien1.jpg" alt="En bild på Velari">
+        <p>En vänlig och karismatisk reseguide från planeten Zynara.</p>
+        <p>Velari har en passion för att visa resenärerna de mest spektakulära platserna i galaxen, alltid med ett stort leende. Hon är känd för sina fascinerande berättelser om universums hemligheter.</p>
+        <p>Velari har en naturlig talang för att skapa en varm och välkomnande atmosfär, vilket gör att hennes resenärer känner sig som hemma oavsett var de befinner sig i galaxen.</p>
+        <p>Hennes djupa kunskap om varje destination, kombinerad med hennes förmåga att knyta an till människor, gör varje utflykt till en oförglömlig upplevelse.</p>
+        <p>Varje äventyr med Velari börjar med en noggrant utarbetad plan. Hon lägger ner tid och engagemang på att välja de mest spektakulära platserna, oavsett om det handlar om att utforska de glittrande</p>
+        <p> stränderna på Alora, vandra genom de mystiska skogarna på Thalos eller upptäcka de historiska ruinerna på planeten Galdor. Velari ser till att varje resenär får en personlig touch, 
+        <p> där hon anpassar resan efter individuella intressen och önskemål.</p>
+</div>
+
+<div class="skill-bar" data-skill="70"></div>
+<div class="skill-bar" data-skill="60"></div>
+<div class="skill-bar" data-skill="90"></div>
+
+
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Bilder%20pa%20Velari/Velari1.jpg" alt="En bild på Velari" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Bilder%20pa%20Velari/Velari2.jpg" alt="En bild på Velari" style="width: 100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Bilder%20pa%20Velari/Velari3.jpg" alt="En bild på Velari" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Bilder%20pa%20Velari/Velari4.jpg" alt="En bild på Velari" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Bilder%20pa%20Velari/Velari5.jpg" alt="En bild på Velari" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Bilder%20pa%20Velari/Velari6.jpg" alt="En bild på Velari" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+
+    <div id="app">
+        <project-app></project-app>
+    </div>
+    
+
+    <template id="projectApp">
+        <h2>Mina Projekt</h2>
+        <input id="inputruta" type="text" v-model="filterValue" @input="filterProjects" placeholder="Filtrera projekt...">
+        
+        <button @click="sortProjects('asc')">A-Ö</button>
+        
+        <button @click="sortProjects('desc')">Ö-A</button>
+        
+        <div id="project-list">
+          <div v-for="project in displayedProjects" :key="project.title">
+            <h3>{{ project.title }}</h3>
+            <p>Kund: {{ project.client }}</p>
+            <p>{{ project.description }}</p>
+          </div>
+        </div>
+    </template>
+    
+      
+
+    <footer>
+        <p>Adress:</p>
+        <p>Rymdvägen 1</p>
+        <p>797 62</p>
+        <p>Vintergatan</p>
+    </footer>
+</body>
+</html>
