@@ -1,0 +1,299 @@
+
+/*Denna koden är generell*/
+body {
+    font-family: 'Gowun Batang';
+    background-image: linear-gradient(to bottom, #b1acb6, #5B729B);
+    margin: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3{
+    font-size: 25px;
+    text-align: left;
+}
+
+p {
+    text-align: left;
+    margin: 1rem;
+}
+
+h1, h2, a {
+    text-align: center;
+    margin: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+header {
+    background-color: #0E2440; 
+    padding: 1rem; 
+    text-align: center;
+}
+
+/*Flyttningen av bilderna */
+img {
+    max-width: 100%; 
+    height: auto;   
+    border-radius: 7%; 
+    border: solid #ffffff;
+}
+
+/*Meny för mobilskärm*/
+#menu {
+    display: none;
+    list-style-type: none;
+}
+
+#menuToggle:checked~#menu {
+    display: block;
+}
+
+#menuIkon {
+    color: #ffffff; 
+    cursor: pointer; 
+    display: inline-block;
+}
+
+#menuToggle {
+    display: none;
+}
+
+#menu li {
+    display: block;
+    margin: 1rem;
+}
+
+a {
+    text-decoration: none;
+    padding: 0.4rem;
+}
+
+a:hover {
+    background-color: #7288f6;
+}
+
+
+/*För mobilskärm*/
+.item {
+    display: block;
+    width: 100%;
+}
+
+/*För bilden på Rynok*/
+.item2 {
+    display: flex;            
+    justify-content: center;  
+    align-items: center;     
+}
+
+/*För varje grid*/
+.gridContainer {
+    display: grid; 
+}
+
+.grid-item {
+    margin: 1rem;
+    background-color: #4948481b; 
+}
+
+
+
+/*För bildpelet*/
+.slideshow-container {
+    position: relative; 
+    max-width: 100%;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+  }
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+  }
+
+  .next {
+    right: 0; 
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: #7288f6;
+  }
+
+
+
+/* För skillbar container */
+.färdighet-container {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #f2f2f25f; 
+    border-radius: 8px; 
+}
+
+.färdighet {
+    margin-bottom: 1rem; 
+}
+
+.färdighet-namn {
+    font-weight: bold; 
+    color: #3B568C; 
+}
+
+.färdighet-bar {
+    background-color: #C8C4C3; 
+    border-radius: 6px; 
+    width: 100%; 
+    height: 20px;
+}
+
+        /*För att fylla baren*/
+.färdighet-fill {
+    height: 100%; 
+    background-image: linear-gradient(to left, #cda2f8, #5B729B);
+    border-radius: 6px; 
+    width: 0; 
+    animation: fillSkillBar 4s ease forwards; 
+    transition: width 4s ease; 
+}
+
+        /* Animering som fyller */
+@keyframes fillSkillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--skill-level); 
+    }
+}
+
+
+/*Projekt i item6*/
+.project-title {
+    text-align: left; 
+}
+
+.sök-input, .sortera-button {
+    margin: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Gowun Batang';
+}
+.sök-input{
+    height: 20px; 
+}
+
+.sortera-button{
+    cursor: pointer;
+    display: inline-block; 
+}
+
+.sortera-button:hover {
+    background-color: #7288f6; 
+}
+
+    /*Ifyllanden för projekte*/
+.project-item{
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.project-item:nth-last-of-type(odd){
+    background-color: #9faffb82;
+}
+
+
+/* Layout för datorskärm när det är min:768px */
+@media only screen and (min-width: 768px) {
+
+    .gridContainer {
+        display: grid;
+        grid-template-rows: auto; 
+        gap: 1em; 
+    }
+
+    .grid-item {
+        margin: 1em;
+        background-color: #4948481b; 
+        border-radius: 10px;
+    }
+
+    .item1{
+        grid-row: 1;
+        grid-column:  1 / span 2;
+    }
+
+    .item2{
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .item3{
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    .item4{
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    .item5{
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    .item6 {
+        grid-row: 4; 
+        grid-column: 1 / span 2; 
+        width: 100%; 
+    }
+    
+    #menuIkon {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+        text-align: center;
+    }
+
+    #menu li {
+        display: inline;
+        margin: 2.4rem;
+    }
+}
+
+footer {
+    background-color: #182030;
+    display: flex; 
+    margin-top: auto;
+    
+}
+
+footer p {
+    margin: 0;
+    padding: 0 0.5rem;
+    text-shadow: 1px 1px 10px #fffcc6;
+    color: #fff;
+}

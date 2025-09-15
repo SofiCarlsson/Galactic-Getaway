@@ -1,0 +1,35 @@
+
+{
+    "projekt": [
+      {
+        "titel": "Stjärnhimmelsvandring",
+        "kund": "Lyra Space Cruises",
+        "beskrivning": "Rynok skapade en interaktiv upplevelse där gästerna fick uppleva en stjärnklar himmel som reagerade på deras rörelser. Gästerna kände sig som om de svävade bland stjärnorna och kunde påverka de astronomiska fenomenen runt sig.",
+        "mera_info": "Upplevelsen anpassades för att vara unik för varje individ genom att använda avancerad teknik för att manipulera atmosfär och ljus."
+      },
+      {
+        "titel": "Meteorregnets Symfoni",
+        "kund": "Galactic Getaways",
+        "beskrivning": "För ett exklusivt event designade Rynok en meteorskur som svepte över Neptunus’ himmel i en färgpalett av blått, grönt och lila. Kometerna syntes både dag och natt och skapade en spektakulär, drömlik känsla.",
+        "mera_info": "Denna upplevelse samordnades med musik för att ge en dramatisk effekt som förstärktes vid varje nedslag."
+      },
+      {
+        "titel": "Norrsken över Titan",
+        "kund": "Exoplanet Expeditions",
+        "beskrivning": "Rynok återskapade ett intensivt norrsken som dansade över horisonten på månen Titan. Gästerna upplevde en förtrollande och mystisk atmosfär där norrskenet interagerade med omgivningen.",
+        "mera_info": "Ljusspelet fick gästerna att känna sig delaktiga i naturens mest spektakulära skådespel, tack vare Rynoks skicklighet i att manipulera atmosfäriska partiklar."
+      },
+      {
+        "titel": "Astral Skulpturer",
+        "kund": "Celestial Tours",
+        "beskrivning": "Rynok skapade en serie rymdfenomen som fungerade som tillfälliga konstinstallationer över gasjätten Jupiter. Dessa \"astrala skulpturer\" formades av gaser och ljus, och förändrades i realtid beroende på observationernas vinklar.",
+        "mera_info": "Gästerna ombord på rymdskeppen kunde se dessa magnifika formationer som om de var skulpturer i rymden."
+      },
+      {
+        "titel": "Dimridåer över Mars",
+        "kund": "Red Planet Retreats",
+        "beskrivning": "För en avkopplande atmosfär på Mars, skapade Rynok tunna dimridåer över landskapet. Dimman förändrades i färg beroende på dagens tid och kastade ett drömskt skimmer över de marsianska slätterna.",
+        "mera_info": "Upplevelsen förstärktes med subtila ljuseffekter som förvandlade den röda planeten till en plats för lugn och reflektion."
+      }
+    ]
+  }

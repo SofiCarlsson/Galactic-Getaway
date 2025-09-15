@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sofi.css">
+    <script src="sofi.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="sofivue.js"></script>
+    <title>Rynok</title>
+</head>
+<body>
+    <header>
+        <h1>GALACTIC GETAWAYS</h1>
+        <input type="checkbox" id="menuToggle">
+        <label for="menuToggle" id="menuIkon">&#9776;</label>
+        <ul id="menu">
+            <li><a href="../index.html#omOss">Om oss</a></li>
+            <li><a href="../index.html#våraAnställda">Våra anställda</a></li>
+            <li><a href="../index.html#resmål">Våra resmål</a></li>
+            <li><a href="../index.html#boka">Kontakta oss</a></li>
+        </ul>
+    </header>
+
+    <div class="gridContainer">
+        <div class="grid-item item1"> 
+            <h2>Rynok</h2> 
+        </div>
+        
+        <div class="grid-item item2">
+            <img id="alienBild" src="alien4.jpg" alt="Bild på en alien som sitter vid ett kontorsbord">
+        </div>
+    
+        <div class="grid-item item3">
+            <h2>Om mig</h2> 
+            <p>Jag är Rynok, chef för Galactic Getaways och expert på atmosfäriska upplevelser från planeten Aerion.</p>
+            <p>Med min förmåga att manipulera atmosfäriska fenomen skapar jag oförglömliga rymdupplevelser för våra gäster.</p>
+            <p>Med min unika förmåga kan jag designa stjärnklara vyer som får mina gäster att känna sig som om de svävar bland stjärnorna.</p>
+            <p>Jag kan framkalla spektakulära meteorregn, där färgglada kometer sveper över himlen och förvandlar natten till en dröm.</p>
+            <p>Ja, jag återskapar magiska norrsken som dansar över horisonten och ger varje resa en mystisk och förtrollande känsla.</p>
+            <p>Genom att använda min kunskap och kreativitet skapar jag oförglömliga minnen för alla som söker äventyr och skönhet i universum.</p>
+            <p>Min insats gör varje resa till en unik och magisk upplevelse som mina gäster kommer att minnas länge efter att de återvänt till jorden.</p>
+        </div>
+    
+        <div class="grid-item item4">
+            <h2>Bildspel</h2>
+            <div class="slideshow-container">
+                <div class="bilder">
+                    <img src="bilspel1.jpg" alt="Bild på en alien som sitter vid ett kontorsbord brevid en jordglob">
+                </div>
+                <div class="bilder">
+                    <img src="bildspel2.jpg" alt="Bild på en alien som sitter vid ett kontorsbord med data runt sig">
+                </div>
+                <div class="bilder">
+                    <img src="bildspel3.jpg" alt="Bild på en alien som sitter vid ett kontorsbord och kollar på en jordglob">
+                </div>
+                <div class="bilder">
+                    <img src="bildspel4.jpg" alt="Bild på en alien som håller i papper">
+                </div>
+                <div class="bilder">
+                    <img src="bildspel5.jpg" alt="Bild på en alien som sitter vid ett kontorsbord och kollar rakt fram">
+                </div>
+                <a class="prev" onclick="bytBild(-1)">&#10094;</a>
+                <a class="next" onclick="bytBild(1)">&#10095;</a>
+            </div>
+        </div>
+    
+        <div class="grid-item item5">
+            <div class="färdighet-container">
+                <h2>Färdigheter</h2>
+                <div class="färdighet">
+                    <div class="färdighet-namn">Atmosfärisk manipulation</div>
+                    <div class="färdighet-bar">
+                        <div class="färdighet-fill" style="--skill-level: 80%;"></div>
+                    </div>
+                </div>
+                <div class="färdighet">
+                    <div class="färdighet-namn">Kreativ design</div>
+                    <div class="färdighet-bar">
+                        <div class="färdighet-fill" style="--skill-level: 70%;"></div>
+                    </div>
+                </div>
+                <div class="färdighet">
+                    <div class="färdighet-namn">Ledarskap</div>
+                    <div class="färdighet-bar">
+                        <div class="färdighet-fill" style="--skill-level: 99%;"></div>
+                    </div>
+                </div>
+                <div class="färdighet">
+                    <div class="färdighet-namn">Samarbete</div>
+                    <div class="färdighet-bar">
+                        <div class="färdighet-fill" style="--skill-level: 85%;"></div>
+                    </div>
+                </div>
+                <div class="färdighet">
+                    <div class="färdighet-namn">Problemlösning</div>
+                    <div class="färdighet-bar">
+                        <div class="färdighet-fill" style="--skill-level: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item item6">
+            <h2>Projekt</h2>
+            <div id="app">
+                <p>Här kan du söka efter ett specifikt projekt via dess namn, eller sortera projekten i bokstavsordning från A-Ö eller Ö-A.</p>
+                
+                <div class="button-container">
+                    <button @click="sorteraProjekt" class="sortera-button">Sortera A-Ö</button> 
+                    <button @click="sorteraProjekÖTillA" class="sortera-button">Sortera Ö-A</button>
+                </div>  
+                <div>
+                    <input id="input" type="text" v-model="sökBokstav" class="sök-input" placeholder="Skriv en bokstav...">
+                </div>
+                <div v-for="specifiktProjekt in filtreradeProjekt" class="project-item">
+                    <h3>{{ specifiktProjekt.titel }}</h3>
+                    <p>Kund: {{ specifiktProjekt.kund }}</p> 
+                    <p>Beskrivning: {{ specifiktProjekt.beskrivning }}</p>
+                    <p>Mera info: {{ specifiktProjekt.mera_info }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Adress:</p>
+        <p>Rymdvägen 1</p>
+        <p>797 62</p>
+        <p>Vintergatan</p>
+    </footer>
+</body>
+</html>
