@@ -11,7 +11,7 @@ En företagswebbplats för det fiktiva intergalaktiska resebolaget Galactic Geta
 ### Våra resmål
 <img width="1873" height="682" alt="Skärmbild 2025-10-11 095836" src="https://github.com/user-attachments/assets/b64ec2e0-7040-4aff-8c4a-ec54ba21f6d8" />
 
-### Kontaktformulär 
+### Formulär för bokning 
 <img width="1880" height="711" alt="Skärmbild 2025-10-11 095850" src="https://github.com/user-attachments/assets/be177212-577c-4b46-ba5c-7d95eefdc72c" />
 
 ## Funktioner
